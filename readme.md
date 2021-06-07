@@ -47,8 +47,8 @@ https://gamespace.icyftl.ru/rly_secret_path
 ## Stage II
 
 Скачиваем картинку. Вообще, лично я сразу машинально проверяю [EXIF метаданные](https://ru.wikipedia.org/wiki/EXIF), после этого
-идет проверка [StegTool]("https://github.com/aallott/StegTool")'ом и если ничего не найдено, то только после этого я начинаю
-копаться в файле еще более глубже. В дело вступает [binwalk]("https://tools.kali.org/forensics/binwalk").  
+идет проверка [StegTool](https://github.com/aallott/StegTool)'ом и если ничего не найдено, то только после этого я начинаю
+копаться в файле еще более глубже. В дело вступает [binwalk](https://tools.kali.org/forensics/binwalk).  
 Пройдемся по файлу с его помощью:
 
 ![binwalk](pics/5.png)
@@ -79,9 +79,9 @@ https://gamespace.icyftl.ru/rly_secret_path
 
 ![binpic](pics/8.png)
 
-Итак, мы имеем бинарный код и красную пометку, которая является намеком на [XOR]("https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%C2%AB%D0%B8%D0%BB%D0%B8%C2%BB") 9245.
+Итак, мы имеем бинарный код и красную пометку, которая является намеком на [XOR](https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%C2%AB%D0%B8%D0%BB%D0%B8%C2%BB) 9245.
 
-Вообще, это является отсылкой на один из самых моих любимых тасков - [Мнистерство статистики]("https://github.com/teamteamdev/ugractf-2020-quals/tree/master/tasks/mnist") и идеально было бы поднять [MNIST]("https://ru.wikipedia.org/wiki/MNIST_(%D0%B1%D0%B0%D0%B7%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)"), но тут решайте сами. Можно было бы и вручную переписать - цифр не особо много.
+Вообще, это является отсылкой на один из самых моих любимых тасков - [Мнистерство статистики](https://github.com/teamteamdev/ugractf-2020-quals/tree/master/tasks/mnist) и идеально было бы поднять [MNIST](https://ru.wikipedia.org/wiki/MNIST_(%D0%B1%D0%B0%D0%B7%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)), но тут решайте сами. Можно было бы и вручную переписать - цифр не особо много.
 
 Получив цифры, встает вопрос че с ними делать. Перво наперво стоит попробовать перевести их в dec (10-тичная СС).
 Переведя, мы получим вполне приемлимые значения, но не для таблицы ASCII, хотя она первая может придти в голову.  
