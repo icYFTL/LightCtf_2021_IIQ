@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  task:
+    build: .
+    command: python3 main.py
+    ports:
+    - 8767:8000
